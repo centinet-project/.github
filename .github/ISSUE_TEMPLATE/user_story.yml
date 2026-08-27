@@ -1,0 +1,86 @@
+name: "User Story"
+description: "Plantilla para definir historias de usuario con Gherkin, controles de multitenancy y DoD"
+title: "[US]: "
+labels: ["user-story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Definición de Historia de Usuario (Centinet)
+        Completa los bloques funcionales, escenarios de prueba Gherkin y validaciones de seguridad antes de mover este ticket a desarrollo.
+
+  - type: textarea
+    id: canonical_structure
+    attributes:
+      label: "1. Estructura Canónica"
+      description: "Formato estándar de narrativa de usuario."
+      value: |
+        * **Como:** [Rol: Admin / Tenant / TRP Engine / Backend]
+        * **Quiero:** [Acción o funcionalidad concreta]
+        * **Para:** [Beneficio de negocio o valor técnico]
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_components
+    attributes:
+      label: "2. Componentes Afectados"
+      description: "Selecciona los repositorios que requerirán modificaciones para completar esta historia."
+      options:
+        - label: "frontend (Angular)"
+        - label: "backend (Python)"
+        - label: "trp-engine (Go)"
+        - label: "infra (Docker / Shell / IaC)"
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "3. Criterios de Aceptación (Gherkin)"
+      description: "Especifica las condiciones de validación mediante Dado que / Cuando / Entonces."
+      value: |
+        * **Escenario 1:** [Nombre del flujo principal]
+          * **Dado que:** [Estado inicial del sistema / contexto]
+          * **Cuando:** [Acción específica que ejecuta el usuario o evento]
+          * **Entonces:** [Resultado esperado / respuesta del sistema]
+
+        * **Escenario 2:** [Nombre de flujo secundario / alternativo]
+          * **Dado que:** 
+          * **Cuando:** 
+          * **Entonces:** 
+    validations:
+      required: true
+
+  - type: textarea
+    id: edge_cases
+    attributes:
+      label: "4. Edge Cases (Manejo de Fallos)"
+      description: "Comportamiento del sistema cuando la red cae, la API de OSINT falla o los payloads vienen malformados."
+      value: |
+        * **Caso 1:** [Descripción del escenario de fallo]
+          * **Comportamiento esperado:** [Log de error, fallback o respuesta HTTP esperada]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: security_multitenancy
+    attributes:
+      label: "5. Validación de Seguridad y Multitenancy"
+      description: "Verificaciones obligatorias de aislamiento entre clientes."
+      options:
+        - label: "El acceso a los datos está estrictamente restringido por tenant_id."
+          required: true
+        - label: "Los endpoints o consultas cumplen con las políticas de autenticación y autorización (mTLS / JWT)."
+          required: true
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: "6. Definition of Done (DoD)"
+      description: "Criterios técnicos indispensables para dar por completado este ticket."
+      options:
+        - label: "Pruebas unitarias / integración escritas y ejecutadas con éxito."
+          required: true
+        - label: "Sub-issues en repositorios correspondientes completados y merged."
+          required: true
+        - label: "Cambios desplegados y verificados en el entorno VPS."
+          required: true
