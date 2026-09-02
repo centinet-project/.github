@@ -24,7 +24,7 @@ body:
     attributes:
       label: "3. Criterios de aceptación, aplicando Gherkin"
       value: |
-        Escenario 1:
+        Escenario 1
         - Dado: 
         - Cuando: 
         - Entonces:
