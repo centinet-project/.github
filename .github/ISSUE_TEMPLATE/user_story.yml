@@ -22,9 +22,10 @@ body:
   - type: textarea
     id: acceptance
     attributes:
-      label: "3. Criterios de aceptación. "
+      label: "3. Criterios de aceptación, aplicando Gherkin"
       value: |
-        - Dado que: 
+        Escenario 1:
+        - Dado: 
         - Cuando: 
         - Entonces:
     validations:
