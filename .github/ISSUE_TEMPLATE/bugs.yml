@@ -1,0 +1,57 @@
+name: Reporte de Bug
+description: Informa un error en este modulo
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: tipo_error
+    attributes:
+      label: Tipo de error
+      options:
+        - label: Tecnico (Error HTTP explicito)
+        - label: UX / Visual (Interfaz)
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripcion del problema
+      placeholder: El boton no responde...
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      value: |
+        1.
+        2. 
+        3.
+  
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamiento esperado
+      placeholder: Deberia redirigir al dashboard...
+    validations:
+      required: true
+
+  - type: input
+    id: entorno
+    attributes:
+      label: Dispositivo / Navegador / Entorno
+      placeholder: Chrome en MacOS...
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia
+    validations:
+      required: false

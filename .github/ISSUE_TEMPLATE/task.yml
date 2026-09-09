@@ -1,0 +1,34 @@
+name: Tarea Tecnica
+description: Tarea especifica derivada de una historia de usuario
+title: "[TASK]: "
+labels: ["task"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      placeholder: Crear el endpoint login...
+    validations:
+      required: true
+
+  - type: textarea
+    id: todo_list
+    attributes:
+      label: To-Do List
+      value: |
+        1.
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios_aceptacion
+    attributes:
+      label: Criterios de aceptacion
+      value: |
+        1.
+        2. 
+  
+    validations:
+      required: true
