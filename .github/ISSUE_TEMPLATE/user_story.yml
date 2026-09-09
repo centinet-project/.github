@@ -1,11 +1,15 @@
 name: "User Story"
 description: "Plantilla de usuario"
+description: "Plantilla de usuario"
 title: "[US]: "
 labels: ["user-story"]
 body:
   - type: textarea
     id: narrative
+    id: narrative
     attributes:
+      label: "1. Descripción"
+      placeholder: "Como [Rol], quiero [Acción], para [Beneficio]."
       label: "1. Descripción"
       placeholder: "Como [Rol], quiero [Acción], para [Beneficio]."
     validations:
@@ -13,7 +17,10 @@ body:
 
   - type: textarea
     id: context
+    id: context
     attributes:
+      label: "2. Contexto o detalles adicionales"
+      placeholder: "El emprendedor solo podrá... una vez..."
       label: "2. Contexto o detalles adicionales"
       placeholder: "El emprendedor solo podrá... una vez..."
     validations:
