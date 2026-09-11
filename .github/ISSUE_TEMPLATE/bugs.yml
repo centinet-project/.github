@@ -1,4 +1,4 @@
-name: Reporte de Bug
+name: Bug Issue
 description: Informa un error en este modulo
 title: "[BUG]: "
 labels: ["bug"]
@@ -17,7 +17,7 @@ body:
     id: descripcion
     attributes:
       label: Descripcion del problema
-      placeholder: El boton no responde...
+      placeholder: Reducción injusta de...
     validations:
       required: true
 
@@ -25,10 +25,10 @@ body:
     id: pasos
     attributes:
       label: Pasos para reproducir
-      value: |
-        1.
-        2. 
-        3.
+      placeholder: |
+        1. Entrar a la pestaña de agentes y...
+        2. Darle click a añadir agente cuando...
+        3. Cerrar Sesión...
   
     validations:
       required: true
@@ -37,7 +37,7 @@ body:
     id: esperado
     attributes:
       label: Comportamiento esperado
-      placeholder: Deberia redirigir al dashboard...
+      placeholder: Deberia aparecer una venatana...
     validations:
       required: true
 

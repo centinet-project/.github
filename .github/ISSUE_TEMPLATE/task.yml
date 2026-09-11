@@ -1,8 +1,15 @@
-name: Tarea Tecnica
+name: Task Issue
 description: Tarea especifica derivada de una historia de usuario
 title: "[TASK]: "
 labels: ["task"]
 body:
+  - type: input
+    id: user_story
+    attributes:
+      label: link/ID historia de usuario
+    validations:
+      required: false
+
   - type: textarea
     id: objetivo
     attributes:
@@ -15,7 +22,7 @@ body:
     id: todo_list
     attributes:
       label: To-Do List
-      value: |
+      placeholder: |
         1.
         2. 
         3.
@@ -26,9 +33,10 @@ body:
     id: criterios_aceptacion
     attributes:
       label: Criterios de aceptacion
-      value: |
+      placeholder: |
         1.
         2. 
+        3.
   
     validations:
       required: true
